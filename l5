@@ -1,0 +1,100 @@
+#-------------------------------------------------------------------------------------------
+
+#class Cat:
+#    def __init__(self, name, age):
+#        self.name = name
+#        self.age = age
+#    def __str__(self):
+#        return f"Cat {self.name}, its age is {self.age}"
+#    def __repr__(self):
+#        return f"Cat(name = '{self.name}', age = '{self.age}')"
+#cat = Cat("Vasya", 3)
+#print(cat)
+#print(repr(cat))
+
+#============================================================================================
+
+#def my_shiny_new_decorator(function_to_decorate):
+#    def the_wrapper_around_the_original_function():
+#        print("Я - код, кот. отрабатывает до вызова функции")
+#        function_to_decorate()
+#        print("А я - код, кто. отрабатывает ПОСЛЕ")
+#    return the_wrapper_around_the_original_function
+#def stand_alone_function():
+#    print("Я простая функция и я не хочу изменений")
+#stand_alone_function_decorated = my_shiny_new_decorator(stand_alone_function)
+#stand_alone_function_decorated()
+#@my_shiny_new_decorator        
+#def another_stand_alone_function():
+#    print("Оставьте меня в покое")
+#another_stand_alone_function()
+
+
+#--------------------------------------------------------------------------------------------
+#def bread(func):
+#    def wrapper():
+#        print()
+#        func()
+#        print("<\\_____/>")
+#    return wrapper
+#
+#def ingredients(func):
+#    def wrapper():
+#        print("#помидоры")
+#        func()
+#        print("~салат~")
+#    return wrapper
+#
+#@bread
+#@ingredients
+#def sandwich(food = "--ветчина--"):
+#    print(food)
+#
+#sandwich()
+#----------------------------------------------------------------------------------------------
+
+#def a_decorator_passing_arguments(function_to_decorate):
+#    def a_wrapper_accepting_arguments(arg1, arg2):
+#        print("Смотри, что я получил: ", arg1, arg2)
+#        function_to_decorate(arg1, arg2)
+#    return a_wrapper_accepting_arguments
+#
+#@a_decorator_passing_arguments
+#def print_full_name(first_name, last_name):
+#    print("Меня зовут ", first_name, last_name)
+#print_full_name("Василий ", "и мне 15 лет"
+# -----------------------------------------------------------------------------------------------
+
+#class Shape:
+#    def area(self):
+#        print("Метод area должен быть определен")
+#
+#class Circle(Shape):
+#    def __init__(self, radius):
+#        self.radius = radius
+#
+#circle = Circle(10)
+#circle.area()
+
+#------------------------------------------------------------------------------------------------ 
+
+#from abc import ABC, abstractmethod
+#class Shape(ABC):
+#    @abstractmethod
+#    def area(self):
+#        pass
+#
+#class Circle(Shape):
+#    def __init__(self, radius):
+#        self.radius = radius
+#
+#    def area(self):
+#        return 3.14 * self.radius**2
+#shape = Shape()
+#class Square(Shape):
+#    def __init__(self, side):
+#        self.side = side
+#    def area(self):
+#        return self.side**2
+#sq = Square(10)
+
