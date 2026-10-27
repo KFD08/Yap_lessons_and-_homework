@@ -1,0 +1,42 @@
+#import sqlite3
+#def create_db():
+#    conn = sqlite3.connect('univercity.db')
+#    cursor = conn.cursor()
+#    cursor.execute("CREATE TABLE IF NOT EXISTS student (id INTEGER PRIMARY KEY, name TEXT, mark REAL, age INTEGER)")
+#    conn.commit()
+#    conn.close()
+#def insert_into():
+#    conn = sqlite3.connect('univercity.db')
+#    cursor = conn.cursor()
+#    cursor.execute("INSERT INTO student(name, mark, age) VALUES ('Лукашов',5,19)")
+#    conn.commit()
+#    conn.close()
+#def delete():
+#    conn = sqlite3.connect('univercity.db')
+#    cursor = conn.cursor()
+#    cursor.execute("DELETE FROM student WHERE age = 41")
+#    conn.commit()
+#    conn.close()
+# create_db()
+# insert_into()
+# delete()
+
+#def update_info():
+#   conn = sqlite3.connect("univercity.db")
+#    cursor = conn.cursor()
+#   cursor.execute("UPDATE students SET age = 25 WHERE id = 3")
+#    conn.commit()
+#    conn.close()
+
+# update_info()
+
+#def insert_into(name1, mark1, age1):
+#    conn = sqlite3.connect("univercity.db")
+#    cursor = conn.cursor()
+#    cursor.execute('''
+#        INSERT INTO students (name, mark, age)
+#        VALUES (?, ?, ?)''', (name1, mark1, age1))
+    conn.commit()
+    conn.close()
+
+insert_into('Иванов', 65, 18)
